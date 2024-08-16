@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block title %}Люди{% endblock %}
+
+{% block content %}
+    <h1>Список людей</h1>
+    <div class="cards-container">
+        {% for card in cards %}
+            <div class="card">
+                {% if card.profile_avatar %}
+                    <a href="{{ card.profile_avatar.url }}">
+                        <img src="{% thumbnail card.profile_avatar 180x180 %}">
+                    </a>
+                {% endif %}
+                <p>{{ card.first_name }} {{ card.last_name }}</p>
+                <p>{{ card.date_of_birth }} - {{ card.date_of_death }}</p>
+            </div>
+        {% empty %}
+            <p>No cards of person yet</p>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Django
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+*.log
+*.env
+*.DS_Store
+
+# Pytest
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Virtual Environments
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Secrets
+secret_key.txt

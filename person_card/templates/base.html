@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <span>Family tree</span>
+    </div>
+    <div id="content">
+        {% block content%}
+        {% endblock %}
+    </div>
+    <div>
+        {% block footer %}
+        {% endblock %}
+    </div>
+</body>
+</html>
